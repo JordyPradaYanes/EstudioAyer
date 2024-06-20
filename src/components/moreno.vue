@@ -1,35 +1,49 @@
 <script setup>
-    import { ref } from 'vue';
-  
-    const documents = ref([{
-        name: 'OneDrive - Personal', type: 'folder', expanded: true, children:[
-          {name: 'Documentos', type: 'folder', expanded: false, children:[
-            {name: 'Escritorio', type: 'folder', expanded: false, children:[]},
-            {name: 'Galeria', type: 'folder', expanded: false, children:[]},
-            {name: 'Videos', type: 'folder', expanded: false, children:[]},
-            {name: 'Juegos', type: 'folder', expanded: false, children:[]}
-           ]
-        },
+import { ref } from 'vue';
 
-        {name: 'Programacion', type: 'folder', expanded: false, children:[]},
-        {name: 'Informacion', type: 'folder', expanded: false, children:[]},
-        {name: 'Tareas', type: 'folder', expanded: false, children:[]}
-      ]
+const documents = ref([
+    {
+        name: 'OneDrive - Personal', type: 'folder', expanded: true, children: [
+            {
+                name: 'Documentos', type: 'folder', expanded: false, children: [
+                    { name: 'Escritorio', type: 'folder', expanded: false, children: [] },
+                    { name: 'Galeria', type: 'folder', expanded: false, children: [] },
+                    { name: 'Videos', type: 'folder', expanded: false, children: [] },
+                    { name: 'Juegos', type: 'folder', expanded: false, children: [] }
+                ]
+            },
+            {
+                name: 'Programacion', type: 'folder', expanded: false, children: [
+                    { name: 'Videos', type: 'folder', expanded: false, children: [] },
+                    { name: 'Juegos', type: 'folder', expanded: false, children: [] }
+                ]
+            },
+            { name: 'Informacion', type: 'folder', expanded: false, children: [] },
+            {
+                name: 'Tareas', type: 'folder', expanded: false, children: [
+                    { name: 'Videos', type: 'folder', expanded: false, children: [] },
+                    { name: 'Juegos', type: 'folder', expanded: false, children: [] },
+                    { name: 'Videos', type: 'folder', expanded: false, children: [] },
+                    { name: 'Juegos', type: 'folder', expanded: false, children: [] }
+                ]
+            }
+        ]
     }
- ]);
+]
+);
 
-    const folderName = ref('')
+const folderName = ref('')
 
-    const toggleView = (folder) =>{
-        folder.expanded = !folder.expanded
-    }
+const toggleView = (folder) => {
+    folder.expanded = !folder.expanded
+}
 
-    const addFolder = () => {
-        documents.value.push({name: folderName.value, type: 'folder', expanded: false, children: []})
-        folderName.value = ''
-    }
+const addFolder = () => {
+    documents.value.push({ name: folderName.value, type: 'folder', expanded: false, children: [] })
+    folderName.value = ''
+}
 
-  </script>
+</script>
 
 
 <template>
@@ -69,7 +83,8 @@
 
         <div class="mt-4">
             <input class="pl-3 py-1 rounded-l-lg" v-model="folderName" type="text" placeholder="Folder Name">
-            <button @click="addFolder" class="bg-blue-400 p-1 px-2  rounded-r-lg hover:bg-blue-600 hover:text-white">Add</button>
+            <button @click="addFolder"
+                class="bg-blue-400 p-1 px-2  rounded-r-lg hover:bg-blue-600 hover:text-white">Add</button>
         </div>
     </div>
 

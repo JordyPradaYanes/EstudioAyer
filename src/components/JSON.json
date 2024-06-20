@@ -1,0 +1,26 @@
+[
+    {
+        "name": "OneDrive - Personal", "type": "folder", "expanded" : true, "children": [
+            {
+                "name": "Documentos", "type": "folder", "expanded": false, "children": [
+                    { "name": "Escritorio", "type": "folder", "expanded": false, "children": [] },
+                    { "name": "Galeria", "type": "folder", "expanded": false, "children": [] },
+                    { "name": "Videos", "type": "folder", "expanded": false, "children": [] },
+                    { "name": "Juegos", "type": "folder", "expanded": false, "children": [] }
+                ]
+            },
+            {
+                "name": "Programacion", "type": "folder", "expanded": false, "children": [
+                    { "name": "Videos", "type": "folder", "expanded": false, "children": [] },
+                    { "name": "Juegos", "type": "folder", "expanded": false, "children": [] }
+                ]
+            },
+            {
+                "name": "Programacion", "type": "folder", "expanded": false, "children": [
+                    { "name": "Videos", "type": "folder", "expanded": false, "children": [] },
+                    { "name": "Juegos", "type": "folder", "expanded": false, "children": [] }
+                ]
+            }
+        ]
+    }
+]
